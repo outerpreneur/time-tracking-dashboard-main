@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    
+--blue: hsl(246, 80%, 60%);
+
+/* blocks */
+--light-red-work: hsl(15, 100%, 70%);
+--soft-blue-play: hsl(195, 74%, 62%);
+--light-red-study: hsl(348, 100%, 68%);
+--lime-green-exercise: hsl(145, 58%, 55%);
+--violet-social: hsl(264, 64%, 52%);
+--soft-orange-self-care: hsl(43, 84%, 65%);
+
+/* ### Neutral */
+
+--very-dark-blue: hsl(226, 43%, 10%);
+--dark-blue: hsl(235, 46%, 20%);
+--desaturated-blue: hsl(235, 45%, 61%);
+--pale-blue: hsl(236, 100%, 87%);
+
+/* ### Body Copy */
+
+--font-size: 18px (card titles e.g. Work, Play);
+
+/* ### Font */
+
+--font-rubik-: 'Rubik', sans-serif;
+}
+
+
+/* reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* structure */
+
+body {
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: var(--font-rubik-);
+    font-size: var(--font-size);
+}
+
+main {
+    width: 80%;
+    display: grid;
+    gap: 2.5em;
+    grid-template-areas: "profile column1 column2 column3"
+    "profile column4 column5 column6";
+    grid-template-columns: 325px 1fr 1fr 1fr;
+}
+
+.block {
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.inner-block {
+    background-color: var(--dark-blue);
+    padding: 2.5em;
+    border-radius: 20px;
+    width: 100%;
+}
+
+/* profile card */
+
+.profile .name {
+    padding: 2.5em;
+    background-color: var(--blue);
+    border-radius: 20px;
+}
+
+.profile img {
+    width: 100px;
+    margin-bottom: 3em;
+    border:3px solid white; 
+    border-radius: 50%;
+}
+
+.name h1 {
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.profile p {
+    color: var(--pale-blue);
+    margin-bottom: 0.5em;
+}
+
+.period {
+    background-color: var(--dark-blue);
+    padding: 2.5em;
+    border-radius: 15px;
+}
+
+.period ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--pale-blue);
+    
+}
+
+/* blocks */
+
+.profile {
+    grid-area: profile;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.block-1 {
+    grid-area: column1;
+    background-color: var(--light-red-work);
+    background-image: url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position:top right;
+}
+
+.block-2 {
+    grid-area: column2;
+    background-color: var(--soft-blue-play);
+    background-image: url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position:top right;
+}
+
+.block-3 {
+    grid-area: column3;
+    background-color: var(--light-red-study);
+    background-image: url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position:top right;
+}
+
+.block-4 {
+    grid-area: column4;
+    background-color: var(--lime-green-exercise);
+    background-image: url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position:top right;
+}
+
+.block-5 {
+    grid-area: column5;
+    background-color: var(--violet-social);
+    background-image: url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position:top right;
+}
+
+.block-6 {
+    grid-area: column6;
+    background-color: var(--soft-orange-self-care);
+    background-image: url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position:top right;
+}
+
+
+/*  block inner styles */
+
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.7em;
+}
+
+.first-row span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.counter {
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 0.3em;
+}
+
+.last-week-row {
+    color: var(--pale-blue);
+}
