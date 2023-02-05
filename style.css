@@ -47,6 +47,7 @@ body {
     color: white;
     font-family: var(--font-rubik-);
     font-size: var(--font-size);
+    min-height: 100vh;
 }
 
 main {
@@ -211,6 +212,9 @@ main {
         grid-template-areas: "profile" "column1" "column2" "column3" "column4" "column5" "column6";
         grid-template-columns: 1fr;
         width: 90%;
+        gap: 1.5em;
+        margin-top: 5em;
+        margin-bottom: 5em;
     }
 
     .profile .name {
@@ -226,6 +230,7 @@ main {
     .period ul {
         flex-direction: row;
         justify-content: space-between;
+        font-size: 1.5em;
     }
 
     .inner-block {
