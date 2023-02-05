@@ -63,6 +63,7 @@ main {
     border-radius: 20px;
     display: flex;
     align-items: flex-end;
+    cursor: pointer;
 }
 
 .inner-block {
@@ -70,6 +71,10 @@ main {
     padding: 2.5em;
     border-radius: 20px;
     width: 100%;
+}
+
+.block:hover .inner-block {
+    background-color: var(--desaturated-blue);
 }
 
 /* profile card */
@@ -113,6 +118,14 @@ main {
     gap: 1em;
     color: var(--pale-blue);
     
+}
+
+.period ul li {
+    cursor: pointer;
+}
+
+.period ul li:hover {
+    color: #fff;
 }
 
 /* blocks */
@@ -188,6 +201,10 @@ main {
 .first-row span {
     font-size: 20px;
     font-weight: 500;
+}
+
+.first-row img {
+    cursor: pointer;
 }
 
 .counter {
