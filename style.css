@@ -52,12 +52,11 @@ body {
 }
 
 main {
-    width: 80%;
     display: grid;
-    gap: 2.5em;
+    gap: 2.1em;
     grid-template-areas: "profile column1 column2 column3"
     "profile column4 column5 column6";
-    grid-template-columns: 325px 1fr 1fr 1fr;
+    grid-template-columns: 253px 253px 253px 253px;
 }
 
 .block {
@@ -69,9 +68,13 @@ main {
 
 .inner-block {
     background-color: var(--dark-blue);
-    padding: 2.5em;
+    padding: 1.8em;
     border-radius: 20px;
     width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .block:hover .inner-block {
@@ -81,22 +84,23 @@ main {
 /* profile card */
 
 .profile .name {
-    padding: 2.5em;
+    padding: 2em;
     background-color: var(--blue);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    gap: 2.5em;
+    gap: 2.1em;
+    height: 355px;
 }
 
 .profile img {
-    width: 100px;
+    width: 87px;
     border:3px solid white; 
     border-radius: 50%;
 }
 
 .name h1 {
-    font-size: 3em;
+    font-size: 2.6em;
     font-weight: 300;
     margin-bottom: 1em;
 }
@@ -108,15 +112,16 @@ main {
 
 .period {
     background-color: var(--dark-blue);
-    padding: 2.5em;
+    padding: 2em;
     border-radius: 15px;
 }
 
 .period ul {
+    font-size: var(--font-size);
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1.3em;
     color: var(--pale-blue);
     
 }
@@ -200,7 +205,7 @@ main {
 }
 
 .first-row span {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
@@ -209,7 +214,7 @@ main {
     display: inline-block;
     height: 2em;
     width: 2em;
-    text-align: center;
+    text-align: right;
 }
 
 .three-dots:hover .ellipsis path {
@@ -218,7 +223,7 @@ main {
 }
 
 .counter {
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: 200;
 }
 
@@ -230,6 +235,8 @@ main {
 
 .last-week-row {
     color: var(--pale-blue);
+    font-weight: 300;
+    font-size: 15px;
 }
 
 /* responsive styles */
@@ -250,6 +257,7 @@ main {
         flex-direction: row;
         align-items: center;
         gap: 1em;
+        height: 200px;
     }
 
     .name h1 {
