@@ -215,6 +215,8 @@ main {
         gap: 1.5em;
         margin-top: 5em;
         margin-bottom: 5em;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .profile .name {
