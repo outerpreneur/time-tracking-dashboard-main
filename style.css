@@ -204,8 +204,17 @@ main {
     font-weight: 500;
 }
 
-.first-row img {
+.first-row a {
     cursor: pointer;
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+}
+
+.three-dots:hover .ellipsis path {
+    fill: #fff;
+    background-color: red;
 }
 
 .counter {
