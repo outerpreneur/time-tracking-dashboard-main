@@ -29,20 +29,14 @@ const lastFrameCounter = document.querySelectorAll(".last-week-row")
 function getDailyStats() {
     currentFrameCounter.forEach(currentCounterTag => {
         currentCounter += 1;
-        const blockData = data[currentCounter]
-        const getTimeframes = blockData["timeframes"]
-        const getDaily = getTimeframes["daily"]
-        const getCurrent = getDaily["current"]
-        currentCounterTag.innerHTML = getCurrent + "hrs"
+        const currentDailyData = data[currentCounter].timeframes.daily.current
+        currentCounterTag.innerHTML = currentDailyData + "hrs"
     })
     
     lastFrameCounter.forEach(lastWeekCounter => {
         previousCounter += 1;
-        const blockData = data[previousCounter]
-        const getTimeframes = blockData["timeframes"]
-        const getDaily = getTimeframes["daily"]
-        const getLastWeek = getDaily["previous"]
-        lastWeekCounter.innerHTML = `Yesterday - ${getLastWeek}hrs`
+        const previousDailyData = data[currentCounter].timeframes.daily.previous
+        lastWeekCounter.innerHTML = `Yesterday - ${previousDailyData}hrs`
     })
 }
 
@@ -51,20 +45,14 @@ function getDailyStats() {
 function getWeeklyStats() {
     currentFrameCounter.forEach(currentCounterTag => {
         weeklyCurrentCounter += 1;
-        const blockData = data[weeklyCurrentCounter]
-        const getTimeframes = blockData["timeframes"]
-        const getWeekly = getTimeframes["weekly"]
-        const getCurrent = getWeekly["current"]
-        currentCounterTag.innerHTML = getCurrent + "hrs"
+        const currentWeeklyData = data[weeklyCurrentCounter].timeframes.weekly.current
+        currentCounterTag.innerHTML = currentWeeklyData + "hrs"
     })
     
     lastFrameCounter.forEach(lastWeekCounter => {
         weeklyPreviousCounter += 1;
-        const blockData = data[weeklyPreviousCounter]
-        const getTimeframes = blockData["timeframes"]
-        const getWeekly = getTimeframes["weekly"]
-        const getLastWeek = getWeekly["previous"]
-        lastWeekCounter.innerHTML = `Last Week - ${getLastWeek}hrs`
+        const previousWeeklyData = data[weeklyCurrentCounter].timeframes.weekly.previous
+        lastWeekCounter.innerHTML = `Last Week - ${previousWeeklyData}hrs`
     })
 }
 
@@ -73,20 +61,14 @@ function getWeeklyStats() {
 function getMonthlyStats() {
     currentFrameCounter.forEach(currentCounterTag => {
         monthlyCurrentCounter += 1;
-        const blockData = data[monthlyCurrentCounter]
-        const getTimeframes = blockData["timeframes"]
-        const getMonthly = getTimeframes["monthly"]
-        const getCurrent = getMonthly["current"]
-        currentCounterTag.innerHTML = getCurrent + "hrs"
+        const currentMonthlyData = data[monthlyCurrentCounter].timeframes.monthly.current
+        currentCounterTag.innerHTML = currentMonthlyData + "hrs"
     })
     
     lastFrameCounter.forEach(lastWeekCounter => {
         monthlyPreviousCounter += 1;
-        const blockData = data[monthlyPreviousCounter]
-        const getTimeframes = blockData["timeframes"]
-        const getMonthly = getTimeframes["monthly"]
-        const getLastWeek = getMonthly["previous"]
-        lastWeekCounter.innerHTML = `Last Month - ${getLastWeek}hrs`
+        const previousMonthlyData = data[monthlyCurrentCounter].timeframes.monthly.previous
+        lastWeekCounter.innerHTML = `Last Month - ${previousMonthlyData}hrs`
     })
 }
 
